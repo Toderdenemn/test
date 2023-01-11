@@ -19,7 +19,7 @@ function App() {
             <LoggedIn />
           </Route>
 
-          <Route path="signin">
+          <Route path="/signin">
             <SignIn />
           </Route>
 
