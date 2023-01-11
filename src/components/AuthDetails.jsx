@@ -1,6 +1,9 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { auth } from "../firebase";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import "./auth.css";
 
 const AuthDetails = () => {
   const [authUser, setAuthUser] = useState(null);
@@ -28,11 +31,13 @@ const AuthDetails = () => {
   };
 
   return (
-    <div>
+    <div className="signout1">
       {authUser ? (
         <>
-          <p>{`Signed In as ${authUser.email}`}</p>
-          <button onClick={userSignOut}>Sign Out</button>
+          <p>{`Нэвтэрсэн: ${authUser.email}`}</p>
+          <Button variant="primary" type="submit" onClick={userSignOut}>
+            Гарах
+          </Button>
         </>
       ) : (
         <p>Signed Out</p>
