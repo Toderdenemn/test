@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { auth } from "../firebase";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { useHistory } from "react-router-dom";
+
 import "./auth.css";
 
 const AuthDetails = () => {

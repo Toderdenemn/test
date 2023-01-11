@@ -1,21 +1,24 @@
 import "./form.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../../firebase";
+import { useHistory } from "react-router-dom";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  let history = useHistory();
   const signIn = (e) => {
     console.log("signin", e);
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
+        console.log("logged in");
+        history.push("/logged");
       })
       .catch((error) => {
         console.log(error);
@@ -34,7 +37,7 @@ const SignIn = () => {
         >
           <h1>Log In to your Account</h1>
           <br />
-          <Form.Label>Email address</Form.Label>
+          <Form.Label>nuuts@gmail.comnpm i react-router-dom</Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter email"
@@ -47,7 +50,7 @@ const SignIn = () => {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+          <Form.Label>nuutsug</Form.Label>
           <Form.Control
             type="password"
             placeholder="Password"
