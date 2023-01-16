@@ -2,8 +2,6 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { auth } from "../firebase";
 import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import { useHistory } from "react-router-dom";
 
 import "./auth.css";
 
@@ -28,6 +26,7 @@ const AuthDetails = () => {
     signOut(auth)
       .then(() => {
         console.log("sign out successful");
+        window.location = "/signin";
       })
       .catch((error) => console.log(error));
   };
