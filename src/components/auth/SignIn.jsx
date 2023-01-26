@@ -16,7 +16,7 @@ const SignIn = () => {
       .then((userCredential) => {
         console.log(userCredential);
         console.log("logged in");
-        window.location = "/Details";
+        window.location = "/home";
       })
       .catch((error) => {
         console.log(error);

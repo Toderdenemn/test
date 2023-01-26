@@ -1,9 +1,10 @@
 import "./App.css";
 import SignIn from "./components/auth/SignIn";
-import AuthDetails from "./components/AuthDetails";
+// import AuthDetails from "./components/AuthDetails";
 import LoggedIn from "./components/logged";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./components/Home";
 
 const router = createBrowserRouter([
   {
@@ -16,8 +17,8 @@ const router = createBrowserRouter([
     element: <LoggedIn />,
   },
   {
-    path: "/details",
-    element: <AuthDetails />,
+    path: "/home",
+    element: <HomePage />,
   },
 ]);
 
