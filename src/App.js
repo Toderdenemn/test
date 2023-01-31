@@ -5,6 +5,7 @@ import LoggedIn from "./components/logged";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./components/Home";
+import AuthDetails from "./components/AuthDetails";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <HomePage />,
+  },
+  {
+    path: "/details",
+    element: <AuthDetails />,
   },
 ]);
 

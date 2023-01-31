@@ -1,36 +1,71 @@
 import Table from "react-bootstrap/Table";
+import "./auth.css";
 
 function TableExample() {
   return (
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </Table>
+    <>
+      <div className="TabDiv">
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th colSpan={2}>Утасны дугаар</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td colSpan={2}>Mark</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm col-md-4 offset-md-4"
+                >
+                  Удирдах
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td colSpan={2}>Jacob</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm col-md-4 offset-md-4"
+                >
+                  Удирдах
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td colSpan={2}>Jacob</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm col-md-4 offset-md-4"
+                >
+                  Удирдах
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td colSpan={2}>Larry the Bird</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm col-md-4 offset-md-4"
+                >
+                  Удирдах
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </Table>
+      </div>
+    </>
   );
 }
 

@@ -2,7 +2,6 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { auth } from "../firebase";
 import Button from "react-bootstrap/Button";
-
 import "./auth.css";
 
 const AuthDetails = () => {
@@ -26,7 +25,7 @@ const AuthDetails = () => {
     signOut(auth)
       .then(() => {
         console.log("sign out successful");
-        window.location = "/signin";
+        window.location = "/";
       })
       .catch((error) => console.log(error));
   };
@@ -35,13 +34,14 @@ const AuthDetails = () => {
     <div className="signout1">
       {authUser ? (
         <>
-          <p>{`Нэвтэрсэн: ${authUser.email}`}</p>
-          <Button variant="primary" type="submit" onClick={userSignOut}>
-            Гарах
-          </Button>
+          <div>
+            <Button variant="primary" type="submit" onClick={userSignOut}>
+              Гарах
+            </Button>
+          </div>
         </>
       ) : (
-        <p>Signed Out</p>
+        <p>Гарсан</p>
       )}
     </div>
   );
